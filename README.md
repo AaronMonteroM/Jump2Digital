@@ -12,7 +12,7 @@ El dataset resultante tenía, por tanto, las siguientes columnas: Trimestre, Cod
 
 ## Depuración de los datos
 
-Se eliminaron 5 distritos que contenían missing values en los datos de precio y se logró imputar el preción de un registro faltante para un barrio mediante KNNImputer. Por otra parte, se evaluó los outliers y se consideró mantener los outliers al no deberse a errores en la introducción de los datos y poder conllevar una elevada pérdida de información. Finalmente, durante el proceso de clusterización de los barrios, se excluyeron las columnas de trimestre y código y se aplicó una estandarización de los valores del resto de columnas, antes de proceder al cálculo de PCA y la posterior clusterización.
+Se eliminaron 5 distritos que contenían missing values en los datos de precio y se logró imputar el preción de un registro faltante para un barrio mediante KNNImputer. Por otra parte, se evaluó los outliers y se consideró mantener los outliers al no deberse a errores en la introducción de los datos y poder conllevar una elevada pérdida de información. Finalmente, durante el proceso de clusterización de los barrios, se tomo en cuenta únicamente las variables: Preu, Preu/m2, Superficie, TOTAL_DEN_65-70 dB, TOTAL_DEN_70-75 dB, TOTAL_N_60-65 dB y TOTAL_N_65-70 dB (promediandose previamente los precios y la superficies para los diferentes trimestres). Estos datos que ofrecían una distribución normal, fueron estandarizados antes de proceder al cálculo de PCA y la posterior clusterización.
 
 ## Resultados obtenidos
 
